@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Sofia Tarnalitskaya](https://up.htmlacademy.ru/htmlcss/20/user/389189).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Антонова](https://htmlacademy.ru/profile/id39082).
 
 ---
 
