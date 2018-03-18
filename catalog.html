@@ -22,25 +22,44 @@
   			</ul>
   			<ul class="user-navigation">
   				<li class="search-link">
-  					<a href="#"><img src="img/loupe.svg" alt="Форма поиска" width="17" height="17"></a>
-  					<!-- Здесь будет форма поиска -->
+  					<a href="search.html"><img src="img/loupe.svg" alt="Форма поиска" width="17" height="17"></a>
+  					<form class="search-form" action="#" method="post">
+              <p>
+                <label for="search">Поиск</label>
+                <input type="search" id="search" name="search" placeholder="Что ищем?">
+              </p>
+            </form>
   				</li>
-  				<li class="login-link"><a href="#">Вход</a>
-  					<!-- Здесь будет форма логина -->
+  				<li class="login-link"><a class="login-link" href="login.html">Вход</a>
+  					<form class="login-form" action="#" method="post">
+              <p>
+                <label class="visually-hidden" for="email-login">Электронная почта</label>
+                <input type="text" name="email" id="email-login" value="email" placeholder="Электронная почта">
+              </p>
+              <p>
+                <label class="visually-hidden" for="password-login">Пароль</label>
+                <input type="password" name="password" id="password-login" value="password" placeholder="Пароль">
+              </p>
+              <button class="button" type="submit">Войти</button>
+              <p class="login-info">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
   				</li>
   				<li class="basket-link">
   					<a href="modal-basket">2 товара</a>
   					<section class="basket">
 				  		<ul class="basket-items">
 				  			<li>
-				  				<span class="modal-close">x</span>
+				  				<button class="modal-close" type="button">Закрыть</button>
                   <img src="img/product-mini-1.jpg" width="33" height="33" alt="Фотография пломбира с апельсиновым джемом">
                   <p>Пломбир с апельсиновым джемом</p>
 				  				<p>1,5 кг х <span class="transparent">200 руб</span></p>
 				  				<p>300 руб.</p>
 				  			</li>
 				  			<li>
-				  				<span class="modal-close">x</span>
+				  				<button class="modal-close" type="button">Закрыть</button>
                   <img src="img/product-mini-2.jpg" width="33" height="33" alt="Фотография клубничного пломбира с присыпкой из белого шоколада">
 				  				<p>Клубничный пломбир с присыпкой из белого шоколада</p>
 				  				<p>1,5 кг х <span class="transparent">300 руб</span></p>
@@ -64,7 +83,38 @@
   			<li><a class="breadcrumbs-current">Сливочное</a></li>
   		</ul>
   		<section class="filters" >
-  			<!-- Здесь будет форма -->
+  			<form>
+          <label for="sorting">Сортировка:</label>
+          <select name="sorting" id="sorting">
+            <option value="popular" selected>по популярности</option>
+            <option value="low-price">сначала недорогие</option>
+            <option value="high-price">сначала дорогие</option>
+            <option value="low-richness">по жирности</option>
+          </select>
+          <p>
+            <label>Цена: 100 руб. - 500 руб.</label>
+            <input type="range" name="price" min="100" max="500" step="50" value="150,400" multiple>
+          <p>
+            Жирность:
+            <ul>
+              <li><input type="radio" name="richness" value="zero-richness">0%</li>
+              <li><input type="radio" name="richness" value="ten-richness" checked>до 10%</li>
+              <li><input type="radio" name="richness" value="before-thirty-richness">до 30%</li>
+              <li><input type="radio" name="richness" value="after-thirty-richness">выше 30%</li>
+            </ul>
+          </p>
+          <p>
+            Наполнитель:
+            <ul>
+              <li><input type="checkbox" name="filler" value="chocolate" checked>шоколадные</li>
+              <li><input type="checkbox" name="filler" value="sugar" checked>сахарные присыпки</li>
+              <li><input type="checkbox" name="filler" value="fruits">фрукты</li>
+              <li><input type="checkbox" name="filler" value="syrup">сиропы</li>
+              <li><input type="checkbox" name="filler" value="jam">джемы</li>
+            </ul>
+          </p>
+          <button class="button" type="submit">Применить</button>
+        </form>
   		</section>
   		<section class="catalog">
   			<ul class="catalog-items" >
@@ -169,7 +219,7 @@
   			</ul>
   		</div>
   		<p class="footer-copyright">
-  			<a href="https://htmlacademy.ru" ><img src="http://placehold.it/150x100" width="110" height="40" alt="Логотип HTML академии"></a>
+  			<a href="https://htmlacademy.ru" ><img src="img/logo-htmlacademy.svg" width="110" height="40" alt="Логотип HTML академии"></a>
   			Сделано в <a href="https://htmlacademy.ru" class="button">HTML Academy</a> &copy; 2017
   		</p>
   	</footer>     
