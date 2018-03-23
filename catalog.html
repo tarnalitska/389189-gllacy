@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
 	<title>Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 		<header class="main-header">
@@ -40,7 +43,7 @@
                 <label class="visually-hidden" for="password-login">Пароль</label>
                 <input type="password" name="password" id="password-login" value="password" placeholder="Пароль">
               </p>
-              <button class="button" type="submit">Войти</button>
+              <button class="button gradient-button" type="submit">Войти</button>
               <p class="login-info">
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
@@ -75,16 +78,16 @@
   			<p class="main-navigation-big">8 812 450-25-25</p>
   		</nav>
   	</header>
-  	<main>
+  	<main class="main-catalog">
   		<h1>Сливочное мороженое</h1>
   		<ul class="breadcrumbs">
   			<li><a href="index.html">Главная</a></li>
   			<li><a href="catalog.html">Каталог</a></li>
-  			<li><a class="breadcrumbs-current">Сливочное</a></li>
+  			<li class="breadcrumbs-current"><a>Сливочное</a></li>
   		</ul>
   		<section class="filters" >
   			<form>
-          <label for="sorting">Сортировка:</label>
+          <label class="filter-header" for="sorting">Сортировка:</label>
           <select name="sorting" id="sorting">
             <option value="popular" selected>по популярности</option>
             <option value="low-price">сначала недорогие</option>
@@ -92,10 +95,10 @@
             <option value="low-richness">по жирности</option>
           </select>
           <p>
-            <label>Цена: 100 руб. - 500 руб.</label>
+            <label class="filter-header">Цена: 100 руб. - 500 руб.</label>
             <input type="range" name="price" min="100" max="500" step="50" value="150,400" multiple>
           <p>
-            Жирность:
+            <span class="filter-header">Жирность:</span>
             <ul>
               <li>
                 <label>
@@ -120,7 +123,7 @@
             </ul>
           </p>
           <p>
-            Наполнитель:
+            <span class="filter-header">Наполнитель:</span>
             <ul>
               <li>
                 <label>
@@ -158,67 +161,67 @@
   					<p>310 ₽/кг</p>
   					<h4><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h4>
   					<img src="img/product-1.jpg" width="270" height="270" alt="Фотография сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>  				
   				<li class="product-item">  	
   					<p>380 ₽/кг</p>
   					<h4><a href="#">Сливочно-кофейное с кусочками шоколада</a></h4>
   					<img src="img/product-2.jpg" width="270" height="270" alt="Фотография сливочно-кофейного мороженого с кусочками шоколада">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>355 ₽/кг</p>
   					<h4><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h4>
   					<img src="img/product-3.jpg" width="270" height="270" alt="Фотография сливочно-клубничного мороженого с присыпкой из белого шоколада">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>415 ₽/кг</p>
   					<h4><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h4>
   					<img src="img/product-4.jpg" width="270" height="270" alt="Фотография сливочного крем-брюле мороженого с карамельной подливкой">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item">
   					<p>325 ₽/кг</p>
   					<h4><a href="#">Сливочное с брусничным джемом</a></h4>
   					<img src="img/product-5.jpg" width="270" height="270" alt="Фотография сливочного мороженого с брусничным джемом">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>410 ₽/кг</p>
   					<h4><a href="#">Сливочно-черничное с цельными ягодами черники</a></h4>
   					<img src="img/product-6.jpg" width="270" height="270" alt="Фотография сливочно-черничного мороженого с цельными ягодами черники">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item">  	
   					<p>375 ₽/кг</p>
   					<h4><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h4>
   					<img src="img/product-7.jpg" width="270" height="270" alt="Фотография сливочно-лимонного мороженого с карамельной присыпкой">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>375 ₽/кг</p>
   					<h4><a href="#">Сливочное с шоколадной стружкой</a></h4>
   					<img src="img/product-8.jpg" width="270" height="270" alt="Фотография сливочного мороженого с шоколадной стружкой">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>440 ₽/кг</p>
   					<h4><a href="#">Сливочно-ванильное с кусочками шоколада</a></h4>
   					<img src="img/product-9.jpg" width="270" height="270" alt="Фотография сливочно-ванильного мороженого с кусочками шоколада">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>435 ₽/кг</p>
   					<h4><a href="#">Сливочное с ментоловым сиропом</a></h4>
   					<img src="img/product-10.jpg" width="270" height="270" alt="Фотография сливочного мороженого с ментоловым сиропом">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>355 ₽/кг</p>
   					<h4><a href="#">Сливочное с кусочками черного шоколада</a></h4>
   					<img src="img/product-11.jpg" width="270" height="270" alt="Фотография сливочного мороженого с кусочками черного шоколада">
-  					<a class="button" href="#">Быстрый просмотр</a>
+  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
   				</li>
   				<li class="product-item"> 
   					<p>420 ₽/кг</p>
@@ -228,12 +231,13 @@
   				</li>
   			</ul>
   			<ul class="pagination-list">
+        <li class="pagination-item pagination-item-disabled"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать влево"></a></li>
 				<li class="pagination-item pagination-item-current"><a>1</a></li>
 				<li class="pagination-item"><a href="#">2</a></li>
 				<li class="pagination-item"><a href="#">3</a></li>
 				<li class="pagination-item"><a href="#">4</a></li>
 				<li class="pagination-item"><a href="#">5</a></li>
-				<li class="pagination-item"><a href="#">></a></li>
+				<li class="pagination-item"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать вправо"></a></li>
 			</ul>
   		</section>
   	</main>
