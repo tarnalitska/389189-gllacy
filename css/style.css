@@ -7,43 +7,27 @@ body {
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 500;
-	color: #fff ;
-
+	color: #fff;
 	background-color: #849d8f;	
+}
+
+.button {
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	background-color: 0;
 }
 
 a {
 	text-decoration: none;
 }
 
-.main-navigation {
-	line-height: 18px;
-	font-weight: 700;
-	color: #fff;	
+a:hover, a:focus {
+	color: #ffbc9e;
 }
 
-.user-navigation {
-	font-size: 14px;
-	line-height: 16px;
-}
-
-.main-navigation {
-	display: flex;
-}
-
-.main-menu li {
-	text-decoration: underline;
-	margin-left: 28px;
-}
-
-.sub-menu a {
-	font-size: 14px;
-	line-height: 16px;
-	font-weight: 400;
-}
-
-.sub-menu li:first-child a {
-	font-weight: 700;
+.visually-hidden {
+	display: none;
 }
 
 nav p {
@@ -66,23 +50,141 @@ nav p {
 	list-style: none;
 }
 
-.main-menu a, 
-.user-navigation a {	
-	color: #fff;
-}
-
 .sub-menu li a {
 	color: #323232;
 }
 
-.main-menu a:hover,
-.main-menu a:focus,
+.main-navigation {
+	display: flex;
+}
+
+/* Main menu */
+
+.main-menu {
+	line-height: 18px;
+	font-weight: 700;
+	color: #fff;
+	display: flex;	
+}
+
+.main-menu li {
+	margin-left: 28px;
+}
+
+.main-menu > li > a {	
+	color: #fff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.main-menu > ul {
+	display: flex;
+}
+
+.main-menu > li > a:not(.main-menu-current):hover,
+.main-menu > li > a:not(.main-menu-current):focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
 	color: #333333;
+	text-decoration: none;
 	background-color: #f7f6f3;
+	height: 32px;
+	border-radius: 35px;
+	padding: 5px 15px;
+
 }
 
+.main-menu > li > a:not(.main-menu-current):active {
+	background-color: #ededed;
+	box-shadow: inset 0 2px 1px 0 #696969;
+}
+
+
+.main-menu-current > a {
+	background-color: #d07058;
+	text-decoration: none;
+	height: 32px;
+	border-radius: 35px;
+	padding: 5px 15px;
+}
+
+.sub-menu {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	display: none;
+}
+
+.sub-menu li {
+	margin: 0;
+	padding: 0;
+	padding: 5px 15px;
+}
+
+.sub-menu a {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
+	text-decoration: none;
+}
+
+.sub-menu li:first-child a {
+	font-weight: 700;	
+}
+
+.sub-menu li:first-child {
+	border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+}
+
+.main-menu li:hover > ul {
+	display: block;
+	background: #f8f7f4;
+	min-width: 143px;
+	margin-top: 10px;
+	margin-left: -5px;
+	border-radius: 5px;
+	box-shadow: 0 20px 20px 0 rgba (0, 0, 0, 0.4);
+}
+
+.sub-menu li:not(:first-child):not(.sub-menu-current):hover,
+.sub-menu li:not(:first-child):not(.sub-menu-current):focus {
+	background: #fbded7;
+}
+
+.sub-menu li:not(:first-child):not(.sub-menu-current):active {
+	background: #f6b5a5;
+}
+
+.sub-menu-current {
+	background: #d07058;
+}
+
+.sub-menu-current a {
+	color: white;
+}
+
+/* User navigation */
+
+.user-navigation a {
+	font-size: 14px;
+	line-height: 16px;
+	color: white;
+}
+
+.login-form .button {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	color: white;
+}
+
+.login-form .login-info a {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+	color: #323232;
+	text-decoration: underline;
+}
 
 .basket-link-empty {
 	font-size: 14px;
@@ -120,6 +222,8 @@ nav p {
 	color: white;
 }
 
+/* Slider + Gradient buttons */
+
 .slider {
 	text-align: center;
 }
@@ -143,17 +247,20 @@ nav p {
 	background-image: linear-gradient(to top, #e74a35, #f26843);	
 	border-radius: 35px;
 	box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76)
+	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.gradient-button:hover,
-.gradient-button:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-} /* issue: overlay не видно на ховере */
+.gradient-button:hover {
+  	box-shadow: 0 2px 2px #ab1000;
+	background-image: linear-gradient(to bottom, #eb6e5d 0%, #f48668 100%);
+} 
 
 .gradient-button:active {
-	background-image: linear-gradient(to bottom, #e74a35, #f26843)
+	box-shadow: inset 0 2px 2px #942617;
+	background-image: linear-gradient(to bottom, #e1613e 0%, #d64531 100%);
 }
+
+/* Main banner */
 
 .main-banner h2 {
 	font-size: 35px;
@@ -187,6 +294,8 @@ nav p {
 	background: url("../img/chocolate-back.png") no-repeat;
 }
 
+/* Products */
+
 .product-list {
 	display: flex;
 }
@@ -213,6 +322,11 @@ nav p {
 	color: white;
 }
 
+.product-item:hover {
+	background-color: rgba(248, 247, 244, 0.2);
+	border-radius: 5px;
+}
+
 .features {
 	color: #323232;
 	background-image: url("../img/pattern.jpg");
@@ -235,11 +349,23 @@ nav p {
 	font-weight: 400;
 }
 
+/* Blog and Subscribe */
+
+.blog-and-subscribe {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog-link h2 {
+	max-width: 285px;
+}
+
 .blog-link {
 	color: #323232;
 	background: url("../img/strawberry-back.jpg") no-repeat;	
 	width: 562px;
 	height: 222px;
+	padding: 27px 20px 0px 25px;
 	border-radius: 15px; /* issue: не применяется радиус*/
 }
 
@@ -252,17 +378,21 @@ nav p {
 }
 
 .subscribe {
-	width: 562px;
+	display: flex;
+	width: 535px;
 	height: 222px;
 	border-radius: 20px;
 	background-image: url("../img/subscribe.png"), url("../img/post-back.jpg");
-	background-size: cover, 548px 210px; 
+	background-clip: padding-box, border-box;
+	padding: 27px 20px 0px 25px;
+
 }
 
 .subscribe b {
 	font-weight: 400;
 	color: #5a5a5a;
 }
+
 
 
 .subscribe-form input {
@@ -278,11 +408,22 @@ nav p {
 	color: white;
 }
 
+/* Map */
+
+.map {
+	display: flex;
+	position: relative;
+}
+
 .map-label {
 	background-color: white;
 	width: 302px;
 	height: 305px;
 	border-radius: 10px;
+	position: absolute;
+	right: 28;
+	top: 62;
+	padding: 43px 0px 0px 27px;
 }
 
 .map p {
@@ -290,6 +431,7 @@ nav p {
 	line-height: 22px;
 	font-weight: 400;
 	color: #323232;
+	max-width: 200px;
 }
 
 .map .address-bold {
@@ -303,6 +445,7 @@ nav p {
 	line-height: 24px;
 	font-weight: 700;
 	color: white;
+	min-width: 252px;
 }
 
 .footer-social ul,
@@ -365,6 +508,10 @@ nav p {
 	line-height: 16px;	
 }
 
+.pagination-item-disabled {
+	transform: scale(-1,1)
+}
+
 .pagination-item {
 	display: inline-block;
 }
@@ -373,7 +520,6 @@ nav p {
 	line-height: 25px;
 	color: white;
 	float: left;
-	padding: 0 9px;
 }
 
 .pagination-item-current a {
@@ -382,6 +528,6 @@ nav p {
 	width: 25px;
 	height: 25px;
 	background: white;
-	border-radius: 50%;
+	border-radius: 50%;	
 }
 
