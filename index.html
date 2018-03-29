@@ -8,21 +8,26 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+    <input class="visually-hidden" type="radio" id="slider-product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="slider-product-2" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="slider-product-3" name="toggle" checked>
+    <div class="site-wrapper">
+      <div class="container">
   	<header class="main-header">
   		<nav class="main-navigation">
   			<a class="main-logo"><img src="img/logo.svg" width="155" height="65" alt="Логотип магазина «Глейси шоп»"></a>
   			<ul class="main-menu">
-  				<li><a href="catalog.html">Каталог</a>
+  				<li><a class="first-level-menu" href="catalog.html">Каталог</a>
   					<ul class="sub-menu">
-  						<li><a>Новинки</a></li>
-  						<li><a href="catalog.html">Сливочное</a></li>
-  						<li><a href="#">Щербеты</a></li>
-  						<li><a href="#">Фруктовый лед</a></li>
-  						<li><a href="#">Мелорин</a></li>
+  						<li><a class="newbie-submenu-header">Новинки</a></li>
+  						<li class="sub-menu-list"><a href="catalog.html">Сливочное</a></li>
+  						<li class="sub-menu-list"><a href="#">Щербеты</a></li>
+  						<li class="sub-menu-list"><a href="#">Фруктовый лед</a></li>
+  						<li class="sub-menu-list"><a href="#">Мелорин</a></li>
   					</ul>
   				</li>
-  				<li><a href="delivery-and-payment.html">Доставка и оплата</a></li>
-  				<li><a href="about.html">О Компании</a></li>
+  				<li><a class="first-level-menu" href="delivery-and-payment.html">Доставка и оплата</a></li>
+  				<li><a class="first-level-menu" href="about.html">О Компании</a></li>
   			</ul>
   			<ul class="user-navigation">
   				<li class="search-link">
@@ -57,30 +62,33 @@
   			<p class="main-navigation-big">8 812 450-25-25</p>  			
   		</nav>
   	</header>
-  	<main class="container">
+  	<main>
   		<section class="slider">
-  			<ul>
-  				<li>
-  					<h1>Крем-брюле и пломбир <br> с малиновым джемом</h1>
-            <img src="img/slider-one.png" width="1079" height="854" alt="Фотография мороженого крем-брюле и пломбира с малиновым джемом" >
-  					<a class="button gradient-button" href="#">Давайте оба!</a>	            
+
+        <div class="slider-controls">
+          <label for="slider-product-1">Первый</label>
+          <label for="slider-product-2">Второй</label>
+          <label for="slider-product-3">Третий</label>
+        </div>
+  			<ul class="slider-list">
+
+          <li class="slider-item slide" id="slide1">
+            <h3 class="slide-title">Крем-брюле и пломбир <br> с малиновым джемом</h3>
+            <a class="button slide-button gradient-button" href="#">Давайте оба!</a>              
+          </li> 
+
+  				<li class="slider-item slide" id="slide2">
+  					<h3 class="slide-title">Шоколадный пломбир <br> и лимонный сорбет</h3>
+  					<a class="button slide-button gradient-button" href="#">Давайте оба!</a>
   				</li>
-  				<li>
-  					<h1>Шоколадный пломбир <br> и лимонный сорбет</h1>
-            <img src="img/slider-two.png" width="1079" height="854" alt="Фотография шоколадного пломбира и лимонный сорбета" >
-  					<a class="button gradient-button" href="#">Давайте оба!</a>
-  				</li>
-  				<li>
-  					<h1>Пломбир с помадкой <br> и клубничный щербет</h1>
-            <img src="img/slider-three.png" width="1079" height="854" alt="Фотография пломбира с помадкой и клубничного щербета" >
-  					<a class="button gradient-button" href="#">Давайте оба!</a>
-  				</li>
-  			</ul>  
-        <ul>
-          <li><button class="button slider-button1">Переключить слайдер</button></li>
-          <li><button class="button slider-button2">Переключить слайдер</button></li>
-          <li><button class="button slider-button3">Переключить слайдер</button></li>
-        </ul>			
+
+          <li class="slider-item slide" id="slide3">
+            <h3 class="slide-title">Пломбир с помадкой <br> и клубничный щербет</h3>
+            <a class="button slide-button gradient-button" href="#">Давайте оба!</a>
+          </li>           				
+
+  			</ul>  	
+
   		</section>
   		<section class="main-banners">
   			<div class="main-banner raspberry">
@@ -95,38 +103,70 @@
   			</div>
   		</section>
   		<section class="products">
-  			<h2 class="visually-hidden">Продукты</h2>
-  			<ul class="product-list">
-  				<li class="product-item">  					
-  					<img src="img/hit.svg" width="61" height="61" alt="Хит">
-  					<p>310 ₽/кг</p>
-  					<h4><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h4>
-  					<img src="img/product-1.jpg" width="270" height="270" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
-  				</li>  				
-  				<li class="product-item">  					
-  					<img src="img/hit.svg" width="61" height="61" alt="Хит">
-  					<p>380 ₽/кг</p>
-  					<h4><a href="#">Сливочно-кофейное с кусочками шоколада</a></h4>
-  					<img src="img/product-2.jpg" width="270" height="270" alt="Сливочно-кофейное с кусочками шоколада">
-  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
-  				</li>
-  				<li class="product-item">  					
-  					<img src="img/hit.svg" width="61" height="61" alt="Хит">
-  					<p>355 ₽/кг</p>
-  					<h4><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h4>
-  					<img src="img/product-3.jpg" width="270" height="270" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
-  				</li>
-  				<li class="product-item">  					
-  					<img src="img/hit.svg" width="61" height="61" alt="Хит">
-  					<p>415 ₽/кг</p>
-  					<h4><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h4>
-  					<img src="img/product-4.jpg" width="270" height="270" alt="Сливочное крем-брюле с карамельной подливкой">
-  					<a class="button gradient-button" href="#">Быстрый просмотр</a>
-  				</li>
-  			</ul>
+        <div class="products-container">
+          <div class="products-wrapper">
+            <h2 class="visually-hidden">Продукты</h2>
+
+            <article class="product-item">
+              <div class="product-item-inner">
+                <div class="flag"></div>
+                <div class="product-item-img">
+                  <img src="img/product-1.jpg" width="270" height="270" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                </div>
+                <div class="price">310<span class="rouble">р</span><span class="lesser">/кг</span></div>
+                <h4 class="product-item-title">
+                  <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                </h4>
+                <a class="product-item-link" href="#">Быстрый просмотр</a>
+              </div>
+            </article>
+      			
+            <article class="product-item">
+              <div class="product-item-inner">
+                <div class="flag"></div>
+                <div class="product-item-img">
+                  <img src="img/product-2.jpg" width="270" height="270" alt="Сливочно-кофейное с кусочками шоколада">
+                </div>
+                <div class="price">380<span class="rouble">р</span><span class="lesser">/кг</span></div>
+                <h4 class="product-item-title">
+                  <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                </h4>
+                <a class="product-item-link" href="#">Быстрый просмотр</a>
+              </div>
+            </article>
+
+            <article class="product-item">
+              <div class="product-item-inner">
+                <div class="flag"></div>
+                <div class="product-item-img">
+                  <img src="img/product-3.jpg" width="270" height="270" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                </div>
+                <div class="price">380<span class="rouble">р</span><span class="lesser">/кг</span></div>
+                <h4 class="product-item-title">
+                  <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                </h4>
+                <a class="product-item-link" href="#">Быстрый просмотр</a>
+              </div>
+            </article>
+
+            <article class="product-item">
+              <div class="product-item-inner">
+                <div class="flag"></div>
+                <div class="product-item-img">
+                  <img src="img/product-4.jpg" width="270" height="270" alt="Сливочное крем-брюле с карамельной подливкой">
+                </div>
+                <div class="price">415<span class="rouble">р</span><span class="lesser">/кг</span></div>
+                <h4 class="product-item-title">
+                  <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                </h4>
+                <a class="product-item-link" href="#">Быстрый просмотр</a>
+              </div>
+            </article>
+
+          </div>  
+        </div>
   		</section>
+
   		<section class="features">
   			<h2>Магазин Гэйси — это онлайн- и офлайн- магазин по продаже мороженого собственного производства на развес</h2>
   			<ul class="feature-items">
@@ -136,22 +176,31 @@
   				<li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
   			</ul>
   		</section>
+
       <div class="blog-and-subscribe">
+
     		<section class="blog-link">
     			<h2 class="visually-hidden">Блог</h2>
     			<b>Новое в нашем блоге</b>
     			<h2><a href="#">10 способов сервировки фруктовых щербетов к столу</a></h2>
     		</section>
+
     		<section class="subscribe">
-    			<h2 class="visually-hidden">Подписка</h2>
-    			<b>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</b>
-    			<form class="subscribe-form">
-            <label class="visually-hidden" for="email-subscribe">Электронная почта</label>
-            <input type="email" id="email-subscribe" name="email-subscribe" placeholder="Электронная почта">   
-            <button class="button gradient-button" type="submit">Отправить</button>
-          </form>
+
+          <div class="subscribe-inner">
+      			<h2 class="visually-hidden">Подписка</h2>
+      			<b>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</b>
+      			<form class="subscribe-form">
+              <label class="visually-hidden" for="email-subscribe">Электронная почта</label>
+              <input type="email" id="email-subscribe" name="email-subscribe" placeholder="Электронная почта">   
+              <button class="button gradient-button" type="submit">Отправить</button>
+            </form>
+          </div>
+
     		</section>
+
       </div>
+
   		<section class="map">
   			<h2 class="visually-hidden">Карта проезда</h2>
   			<img src="img/map.jpg" width="1200" height="430" alt="Карта проезда">
@@ -186,7 +235,7 @@
   		</div>
   		<div class="footer-links">
   			<ul>
-  				<li><a href="#">Для поставщиков</a></li>
+  				<li><a class="footer-link-bold" href="#">Для поставщиков</a></li>
   				<li><a href="#">О производстве</a></li>
   				<li><a href="#">Наши документы</a></li>
   				<li><a href="#">Экологические стандарты</a></li>
@@ -216,5 +265,8 @@
       </form>
   		<button class="modal-close" type="button">Закрыть</button>
   	</section>  	
+
+      </div>
+    </div>
   </body>
 </html>
