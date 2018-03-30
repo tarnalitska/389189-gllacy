@@ -7,15 +7,16 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+
   <div class="site-wrapper">
     <div class="container">
   		<header class="main-header">
     		<nav class="main-navigation">
     			<a class="main-logo"><img src="img/logo.svg" width="155" height="65" alt="Логотип магазина «Глейси шоп»"></a>
     			<ul class="main-menu">
-    				<li class="parent-menu"><a class="main-menu-current">Каталог</a>
+    				<li class="parent-menu"><a class="first-level-menu main-menu-current">Каталог</a>
     					<ul class="sub-menu">
-    						<li><a href="#">Новинки</a></li>
+    						<li><a class="newbie-submenu-header" href="#">Новинки</a></li>
     						<li class="sub-menu-list sub-menu-current"><a>Сливочное</a></li>
     						<li class="sub-menu-list"><a href="#">Щербеты</a></li>
     						<li class="sub-menu-list"><a href="#">Фруктовый лед</a></li>
@@ -55,6 +56,7 @@
     				<li class="basket-link">
     					<a href="modal-basket">2 товара</a>
     					<section class="basket">
+                <h2 class="visually-hidden">Корзина</h2>
   				  		<ul class="basket-items">
   				  			<li>
   				  				<button class="modal-close" type="button">Закрыть</button>
@@ -74,21 +76,28 @@
   				  		<p>Итого: 750 руб.</p>
   				  		<a class="button" href="#">Оформить заказ</a>  		
   				  	</section>
-    				</li>  				
+    				</li>  			
+            <li>
+              <p>С 10 до 20, ежедневно</p>
+              <p class="main-navigation-big">8 812 450-25-25</p>
+            </li>	
     			</ul>
-    			<p>С 10 до 20, ежедневно</p>
-    			<p class="main-navigation-big">8 812 450-25-25</p>
     		</nav>
     	</header>
-    	<main class="main-catalog">
-    		<h1>Сливочное мороженое</h1>
+
+    	<main>
+    		
     		<ul class="breadcrumbs">
     			<li><a href="index.html">Главная</a></li>
     			<li><a href="catalog.html">Каталог</a></li>
-    			<li class="breadcrumbs-current"><a>Сливочное</a></li>
+    			<li><a class="breadcrumbs-current">Сливочное</a></li>
     		</ul>
-    		<section class="filters" >
-    			<form>
+
+        <h1>Сливочное мороженое</h1>
+
+    		<section class="filters">
+          <h2 class="visually-hidden">Фильтры</h2>
+    			<form method="get" action="https://echo.htmlacademy.ru">
             <label class="filter-header" for="sorting">Сортировка:</label>
             <select name="sorting" id="sorting">
               <option value="popular" selected>по популярности</option>
@@ -98,7 +107,7 @@
             </select>
             <p>
               <label class="filter-header">Цена: 100 руб. - 500 руб.</label>
-              <input type="range" name="price" min="100" max="500" step="50" value="150,400" multiple>
+              <input type="range" name="price" min="100" max="500" step="50" value="400">
             <p>
               <span class="filter-header">Жирность:</span>
               <ul>
@@ -123,7 +132,7 @@
                   </label>
                 </li>
               </ul>
-            </p>
+            
             <p>
               <span class="filter-header">Наполнитель:</span>
               <ul>
@@ -153,12 +162,13 @@
                   </label>
                 </li>
               </ul>
-            </p>
+            
             <button class="button" type="submit">Применить</button>
           </form>
     		</section>
+
     		<section class="products">
-          <div class="products-container">
+         
             <div class="products-wrapper">
               <h2 class="visually-hidden">Продукты</h2>
         		
@@ -318,21 +328,19 @@
                 </div>
               </article>     				     				
 
-        		  </div>
-            </div>
-
-    			<ul class="pagination-list">
-          <li class="pagination-item pagination-item-disabled"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать влево"></a></li>
-  				<li class="pagination-item pagination-item-current"><a>1</a></li>
-  				<li class="pagination-item"><a href="#">2</a></li>
-  				<li class="pagination-item"><a href="#">3</a></li>
-  				<li class="pagination-item"><a href="#">4</a></li>
-  				<li class="pagination-item"><a href="#">5</a></li>
-  				<li class="pagination-item"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать вправо"></a></li>
-  			</ul>
+        			<ul class="pagination-list">
+                <li class="pagination-item pagination-item-disabled"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать влево"></a></li>
+        				<li class="pagination-item pagination-item-current"><a>1</a></li>
+        				<li class="pagination-item"><a href="#">2</a></li>
+        				<li class="pagination-item"><a href="#">3</a></li>
+        				<li class="pagination-item"><a href="#">4</a></li>
+        				<li class="pagination-item"><a href="#">5</a></li>
+        				<li class="pagination-item"><a href="#"><img src="img/icon-right-small.svg" width="8" height="12" alt="Листать вправо"></a></li>
+      			</ul>
+          </div>
     		</section>
     	</main>
-    	<footer>
+    	<footer class="container">
     		<div class="footer-social">
     			<ul>
   	  			<li><a href="#" class="social-button">Твиттер</a></li>
@@ -355,8 +363,8 @@
     		</p>
     	</footer>  
   
-    </div>
-  </div>   
-</body>
+      </div>
+    </div>   
+  </body>
 </html>
 
